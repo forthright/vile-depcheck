@@ -1,0 +1,44 @@
+{
+  "name": "@brentlintner/vile-depcheck",
+  "version": "0.0.1",
+  "description": "A vile plugin for checking for unused node modules.",
+  "main": "lib/index.js",
+  "author": "Brent Lintner <brent.lintner@gmail.com>",
+  "license": "MPL-2.0",
+  "directories": {
+    "test": "test",
+    "lib": "lib"
+  },
+  "scripts": {
+    "postinstall": "babel -d lib -m common src",
+    "dev": "bin/dev",
+    "test": "bin/test",
+    "test-cov": "bin/test-cov"
+  },
+  "dependencies": {
+    "@brentlintner/vile": "0.1.7",
+    "babel": "~5.8.23",
+    "bluebird": "~2.9.34",
+    "depcheck": "~0.4.7",
+    "lodash": "~3.10.1"
+  },
+  "devDependencies": {
+    "chai": "~3.2.0",
+    "chai-as-promised": "~5.1.0",
+    "coffee-script": "~1.9.3",
+    "istanbul": "~0.3.19",
+    "mimus": "~0.1.2",
+    "mocha": "~2.3.0",
+    "pryjs": "~0.1.1",
+    "sinon": "~1.16.1",
+    "sinon-chai": "~2.8.0"
+  },
+  "bugs": {
+    "url": "https://github.com/brentlintner/vile-depcheck/issues"
+  },
+  "homepage": "https://github.com/brentlintner/vile-depcheck",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brentlintner/vile-depcheck.git"
+  }
+}
