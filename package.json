@@ -9,6 +9,11 @@
     "test": "test",
     "lib": "lib"
   },
+  "files": [
+    "bin",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "compile": "babel -d lib -m common src",
     "dev": "bin/dev",
