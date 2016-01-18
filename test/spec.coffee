@@ -59,9 +59,13 @@ describe "checking deps", ->
     before -> depcheck_returns ["foo"], [], []
 
     it "generates an error", ->
-      issues = [vile.issue(
-        vile.ERROR, "package.json", "unused module: foo"
-      )]
+      issues = [vile.issue({
+        type: vile.MAIN,
+        path: "package.json",
+        title: "unused module",
+        message: "foo",
+        signature: "depcheck::foo"
+      })]
 
       lib.punish().should.become issues
 
@@ -69,26 +73,32 @@ describe "checking deps", ->
     beforeEach -> depcheck_returns [], ["bar"], []
 
     it "generates a warning", ->
-      issues = [vile.issue(
-        vile.WARNING, "package.json", "unused dev module: bar"
-      )]
+      issues = [vile.issue({
+        type: vile.MAIN,
+        path: "package.json",
+        title: "unused dev module",
+        message: "bar",
+        signature: "depcheck::bar"
+      })]
 
       lib.punish().should.become issues
 
   describe "when invalid files found", ->
     beforeEach -> depcheck_returns [], [], ["file"]
 
-    it "generates an info", ->
-      issues = [vile.issue(
-        vile.INFO, "package.json", "invalid file: file"
-      )]
+    it "generates an error", ->
+      issues = [vile.issue({
+        type: vile.ERR,
+        path: "package.json",
+        title: "invalid file",
+        message: "file",
+        signature: "depcheck::file"
+      })]
 
       lib.punish().should.become issues
 
   describe "when nothing is found", ->
     beforeEach -> depcheck_returns [], [], []
 
-    it "generates an OK issue", ->
-      issues = [vile.issue(vile.OK, "package.json")]
-
-      lib.punish().should.become issues
+    it "generates an empty array", ->
+      lib.punish().should.become []

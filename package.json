@@ -16,12 +16,13 @@
   ],
   "scripts": {
     "compile": "babel -d lib -m common src",
+    "compile-dev": "coffee -cbo .test test",
     "dev": "bin/dev",
     "test": "bin/test",
     "test-cov": "bin/test-cov"
   },
   "dependencies": {
-    "@brentlintner/vile": "~0.4.1",
+    "@brentlintner/vile": "~0.5.2",
     "babel": "~5.8.23",
     "bluebird": "~2.9.34",
     "depcheck": "~0.4.7",

@@ -20,25 +20,39 @@ let punish = (plugin_config) => {
 
       _.each(unused.dependencies, (dep) => {
         issues.push(
-          vile.issue(vile.ERROR, PKG_INFO, `unused module: ${dep}`)
+          vile.issue({
+            type: vile.MAIN,
+            path: PKG_INFO,
+            title: "unused module",
+            message: `${dep}`,
+            signature: `depcheck::${dep}`
+          })
         )
       })
 
       _.each(unused.devDependencies, (dep) => {
         issues.push(
-          vile.issue(vile.WARNING, PKG_INFO, `unused dev module: ${dep}`)
+          vile.issue({
+            type: vile.MAIN,
+            path: PKG_INFO,
+            title: "unused dev module",
+            message: `${dep}`,
+            signature: `depcheck::${dep}`
+          })
         )
       })
 
       _.each(unused.invalidFiles, (file) => {
         issues.push(
-          vile.issue(vile.INFO, PKG_INFO, `invalid file: ${file}`)
+          vile.issue({
+            type: vile.MAIN,
+            path: PKG_INFO,
+            title: "invalid file",
+            message: file,
+            signature: `depcheck::${file}`
+          })
         )
       })
-
-      if (issues.length == 0) {
-        issues.push(vile.issue(vile.OK, PKG_INFO))
-      }
 
       resolve(issues)
     })
