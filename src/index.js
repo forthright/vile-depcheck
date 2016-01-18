@@ -45,7 +45,7 @@ let punish = (plugin_config) => {
       _.each(unused.invalidFiles, (file) => {
         issues.push(
           vile.issue({
-            type: vile.MAIN,
+            type: vile.ERR,
             path: PKG_INFO,
             title: "invalid file",
             message: file,
