@@ -1,4 +1,4 @@
-# vile-depcheck
+# vile-depcheck [![Circle CI](https://circleci.com/gh/brentlintner/vile-depcheck.svg?style=svg&circle-token=af9b51dea76f191842f14db93644dc2d20cb2971)](https://circleci.com/gh/brentlintner/vile-depcheck)
 
 A [vile](http://vile.io) plugin for reporting unused node modules,
 using [depcheck](https://www.npmjs.com/package/depcheck).
