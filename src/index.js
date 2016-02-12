@@ -1,4 +1,4 @@
-let vile = require("@brentlintner/vile")
+let vile = require("@forthright/vile")
 let _ = require("lodash")
 let Promise = require("bluebird")
 let depcheck = require("depcheck")
