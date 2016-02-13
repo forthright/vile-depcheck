@@ -1,6 +1,6 @@
 {
   "name": "@forthright/vile-depcheck",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A vile plugin for checking for unused node modules.",
   "main": "lib/index.js",
   "author": "Brent Lintner <brent.lintner@gmail.com>",
