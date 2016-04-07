@@ -42,14 +42,14 @@ let punish = (plugin_config) => {
         )
       })
 
-      _.each(unused.invalidFiles, (file) => {
+      _.each(unused.invalidFiles, (err, file) => {
         issues.push(
           vile.issue({
             type: vile.ERR,
-            path: PKG_INFO,
+            path: file,
             title: "invalid file",
-            message: file,
-            signature: `depcheck::${file}`
+            message: _.get(err, "stack"),
+            signature: `depcheck::invalid::${file}`
           })
         )
       })

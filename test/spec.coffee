@@ -84,15 +84,15 @@ describe "checking deps", ->
       lib.punish().should.become issues
 
   describe "when invalid files found", ->
-    beforeEach -> depcheck_returns [], [], ["file"]
+    beforeEach -> depcheck_returns [], [], {file: { stack: "foo" } }
 
     it "generates an error", ->
       issues = [vile.issue({
         type: vile.ERR,
-        path: "package.json",
+        path: "file",
         title: "invalid file",
-        message: "file",
-        signature: "depcheck::file"
+        message: "foo",
+        signature: "depcheck::invalid::file"
       })]
 
       lib.punish().should.become issues
