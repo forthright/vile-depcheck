@@ -1,6 +1,6 @@
 # vile-depcheck [![Circle CI](https://circleci.com/gh/forthright/vile-depcheck.svg?style=svg&circle-token=af9b51dea76f191842f14db93644dc2d20cb2971)](https://circleci.com/gh/forthright/vile-depcheck)
 
-[![score-badge](https://vile.io/brentlintner/vile-depcheck/badges/score?token=UxALD5SzEnf9yq4sD49M)](https://vile.io/brentlintner/vile-depcheck) [![security-badge](https://vile.io/brentlintner/vile-depcheck/badges/security?token=UxALD5SzEnf9yq4sD49M)](https://vile.io/brentlintner/vile-depcheck) [![coverage-badge](https://vile.io/brentlintner/vile-depcheck/badges/coverage?token=UxALD5SzEnf9yq4sD49M)](https://vile.io/brentlintner/vile-depcheck) [![dependency-badge](https://vile.io/brentlintner/vile-depcheck/badges/dependency?token=UxALD5SzEnf9yq4sD49M)](https://vile.io/brentlintner/vile-depcheck)
+[![score-badge](https://vile.io/brentlintner/vile-depcheck/badges/score?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/brentlintner/vile-depcheck) [![security-badge](https://vile.io/brentlintner/vile-depcheck/badges/security?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/brentlintner/vile-depcheck) [![coverage-badge](https://vile.io/brentlintner/vile-depcheck/badges/coverage?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/brentlintner/vile-depcheck) [![dependency-badge](https://vile.io/brentlintner/vile-depcheck/badges/dependency?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/brentlintner/vile-depcheck)
 
 A [vile](https://vile.io) plugin for reporting unused node modules, using [depcheck](https://www.npmjs.com/package/depcheck).
 
