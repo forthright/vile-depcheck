@@ -24,36 +24,36 @@ describe "checking deps", ->
   describe "config", ->
     beforeEach -> depcheck_returns [], [], []
 
-    it "supports withoutDev", (done) ->
+    it "supports withoutDev", () ->
       lib
         .punish config: ignore_dev_deps: true
-        .should.be.fulfilled.notify ->
+        .then ->
           depcheck.should.have.been
-            .calledWith sinon.match.string,
-                        sinon.match withoutDev: true
-          done()
+            .calledWith(
+              process.cwd(),
+              { ignoreDirs: [], ignoreMatches: [], withoutDev: true })
 
-    it "supports ignoreDirs", (done) ->
+    it "supports ignoreDirs", () ->
       dirs = ["foo"]
 
       lib
         .punish config: ignore_dirs: dirs
-        .should.be.fulfilled.notify ->
+        .then ->
           depcheck.should.have.been
-            .calledWith sinon.match.string,
-                        sinon.match ignoreDirs: dirs
-          done()
+            .calledWith(
+              process.cwd(),
+              { ignoreDirs: dirs, ignoreMatches: [], withoutDev: false })
 
-    it "supports ignoreMatches", (done) ->
+    it "supports ignoreMatches", () ->
       pkgs = ["bar"]
 
       lib
         .punish config: ignore_deps: pkgs
-        .should.be.fulfilled.notify ->
+        .then ->
           depcheck.should.have.been
-            .calledWith sinon.match.string,
-                        sinon.match ignoreMatches: pkgs
-          done()
+            .calledWith(
+              process.cwd(),
+              { ignoreDirs: [], ignoreMatches: pkgs, withoutDev: false })
 
   describe "when unused deps found", ->
     before -> depcheck_returns ["foo"], [], []
