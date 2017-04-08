@@ -1,4 +1,4 @@
-# vile-depcheck [![Circle CI](https://circleci.com/gh/forthright/vile-depcheck.svg?style=svg&circle-token=af9b51dea76f191842f14db93644dc2d20cb2971)](https://circleci.com/gh/forthright/vile-depcheck)
+# vile-depcheck [![Circle CI](https://circleci.com/gh/forthright/vile-depcheck.svg?style=shield&circle-token=af9b51dea76f191842f14db93644dc2d20cb2971)](https://circleci.com/gh/forthright/vile-depcheck)
 
 [![score-badge](https://vile.io/api/v0/projects/vile-depcheck/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-depcheck) [![security-badge](https://vile.io/api/v0/projects/vile-depcheck/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-depcheck) [![coverage-badge](https://vile.io/api/v0/projects/vile-depcheck/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-depcheck) [![dependency-badge](https://vile.io/api/v0/projects/vile-depcheck/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-depcheck)
 
