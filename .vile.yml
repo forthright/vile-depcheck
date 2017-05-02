@@ -51,7 +51,7 @@ depcheck:
       - wrench
       - pryjs
       - shelljs
-      - "@forthright/*"
+      - "vile-**"
 
 coverage:
   config:
