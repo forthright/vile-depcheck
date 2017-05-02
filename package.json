@@ -1,6 +1,6 @@
 {
   "name": "vile-depcheck",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "A vile plugin for checking for unused node modules.",
   "main": "lib/index.js",
   "files": [
@@ -61,14 +61,6 @@
     "release-it": "^2.7.1",
     "sinon": "~2.1.0",
     "sinon-chai": "~2.9.0"
-  },
-  "bugs": {
-    "url": "https://github.com/forthright/vile-depcheck/issues"
-  },
-  "homepage": "https://github.com/forthright/vile-depcheck",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/forthright/vile-depcheck.git"
   },
   "peerDependencies": {
     "vile": ">=0.13.0"
