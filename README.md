@@ -1,11 +1,10 @@
 # vile-depcheck [![Circle CI](https://circleci.com/gh/forthright/vile-depcheck.svg?style=shield&circle-token=af9b51dea76f191842f14db93644dc2d20cb2971)](https://circleci.com/gh/forthright/vile-depcheck) [![score-badge](https://vile.io/api/v0/projects/vile-depcheck/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-depcheck) [![security-badge](https://vile.io/api/v0/projects/vile-depcheck/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-depcheck) [![coverage-badge](https://vile.io/api/v0/projects/vile-depcheck/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-depcheck) [![dependency-badge](https://vile.io/api/v0/projects/vile-depcheck/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-depcheck)
 
-A [vile](https://vile.io) plugin for reporting unused node modules, using [depcheck](https://www.npmjs.com/package/depcheck).
+A [Vile](https://vile.io) plugin for identifying unused dependencies in your Node projects (via [depcheck](https://www.npmjs.com/package/depcheck)).
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
+- [Node.js](http://nodejs.org)
 
 ## Installation
 
@@ -25,7 +24,7 @@ depcheck:
 
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -52,8 +51,6 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Maintainers
@@ -62,10 +59,10 @@ By participating in this project you agree to our [Code of Conduct](CODE_OF_COND
 
 ## Architecture
 
-- `src` is es6+ syntax compiled with [babel](https://babeljs.io)
+- `src` is es6+ syntax compiled with [Babel](https://babeljs.io)
 - `lib` generated js library
 
-## Hacking
+## Developing
 
     cd vile-depcheck
     npm install
