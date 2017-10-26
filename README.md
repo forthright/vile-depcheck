@@ -16,6 +16,7 @@ A good starting config example:
 ```yaml
 depcheck:
   config:
+    ignore_dev_deps: true
     ignore_deps:
       - "@types/**"
       - "vile-**"
