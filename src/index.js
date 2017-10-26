@@ -10,7 +10,7 @@ let punish = (plugin_config) => {
   let opts = {
     ignoreMatches: _.get(config, "ignore_deps", []),
     ignoreDirs:    _.get(config, "ignore_dirs", []),
-    withoutDev:    _.get(config, "ignore_dev_deps", false)
+    withoutDev:    _.get(config, "ignore_dev_deps", true)
   }
 
   // TODO: refactor things out

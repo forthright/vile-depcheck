@@ -26,12 +26,12 @@ describe "checking deps", ->
 
     it "supports withoutDev", () ->
       lib
-        .punish config: ignore_dev_deps: true
+        .punish config: ignore_dev_deps: false
         .then ->
           depcheck.should.have.been
             .calledWith(
               process.cwd(),
-              { ignoreDirs: [], ignoreMatches: [], withoutDev: true })
+              { ignoreDirs: [], ignoreMatches: [], withoutDev: false })
 
     it "supports ignoreDirs", () ->
       dirs = ["foo"]
@@ -42,7 +42,7 @@ describe "checking deps", ->
           depcheck.should.have.been
             .calledWith(
               process.cwd(),
-              { ignoreDirs: dirs, ignoreMatches: [], withoutDev: false })
+              { ignoreDirs: dirs, ignoreMatches: [], withoutDev: true })
 
     it "supports ignoreMatches", () ->
       pkgs = ["bar"]
@@ -53,7 +53,7 @@ describe "checking deps", ->
           depcheck.should.have.been
             .calledWith(
               process.cwd(),
-              { ignoreDirs: [], ignoreMatches: pkgs, withoutDev: false })
+              { ignoreDirs: [], ignoreMatches: pkgs, withoutDev: true })
 
   describe "when unused deps found", ->
     before -> depcheck_returns ["foo"], [], []

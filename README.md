@@ -15,11 +15,11 @@ A [Vile](https://vile.io) plugin for identifying unused dependencies in your Nod
 ```yaml
 depcheck:
   config:
-    ignore_dev_deps: false
+    ignore_dev_deps: true
     ignore_dirs:
-      - "some-dir"
+      - dir
     ignore_deps:
-      - "some-match-*"
+      - pkg-name
 ```
 
 ## Versioning
