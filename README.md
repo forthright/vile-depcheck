@@ -10,16 +10,18 @@ A [Vile](https://vile.io) plugin for identifying unused dependencies in your Nod
 
     npm i -D vile vile-depcheck
 
-## Config Example
+## Config
 
+A good starting config example:
 ```yaml
 depcheck:
   config:
-    ignore_dev_deps: true
-    ignore_dirs:
-      - dir
     ignore_deps:
-      - pkg-name
+      - "@types/**"
+      - "vile-**"
+    ignore_dirs:
+      - src
+      - .docs
 ```
 
 ## Versioning
