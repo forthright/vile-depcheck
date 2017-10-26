@@ -1,6 +1,6 @@
 {
   "name": "vile-depcheck",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Identify unused dependencies in your Node projects.",
   "main": "lib/index.js",
   "files": [
